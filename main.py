@@ -64,7 +64,7 @@ class SandwichMachine:
 
     def transaction_result(self, coins, cost):
         if coins >= cost:
-            change = coins - cost
+            change = float(coins - cost)
             print(f"We're preparing your" ,sandwich_type , "sandwich! Your change is: $" , change)
             return True
         else:
