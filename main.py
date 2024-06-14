@@ -1,38 +1,38 @@
 recipes = {
     "small": {
         "ingredients": {
-            "bread": 2,  ## slice
-            "ham": 4,  ## slice
-            "cheese": 4,  ## ounces
+            "bread": 2,  # slice
+            "ham": 4,  # slice
+            "cheese": 4,  # ounces
         },
         "cost": 1.75,
     },
     "medium": {
         "ingredients": {
-            "bread": 4,  ## slice
-            "ham": 6,  ## slice
-            "cheese": 8,  ## ounces
+            "bread": 4,  # slice
+            "ham": 6,  # slice
+            "cheese": 8,  # ounces
         },
         "cost": 3.25,
     },
     "large": {
         "ingredients": {
-            "bread": 6,  ## slice
-            "ham": 8,  ## slice
-            "cheese": 12,  ## ounces
+            "bread": 6,  # slice
+            "ham": 8,  # slice
+            "cheese": 12,  # ounces
         },
         "cost": 5.5,
     }
 }
 
 resources = {
-    "bread": 12,  ## slice
-    "ham": 18,  ## slice
-    "cheese": 24,  ## ounces
+    "bread": 12,  # slice
+    "ham": 18,  # slice
+    "cheese": 24,  # ounces
 }
 
 
-### Complete functions ###
+# Complete functions #
 
 class SandwichMachine:
 
@@ -53,8 +53,7 @@ class SandwichMachine:
             return False
 
     def process_coins(self):
-        """Returns the total calculated from coins inserted.
-           Hint: include input() function here, e.g. input("how many quarters?: ")"""
+        """Returns the total calculated from coins inserted."""
         dollars = input("How many dollars?: ")
         half_dollars = input("How many half dollars?: ")
         quarters = input("How many quarters?: ")
@@ -78,7 +77,7 @@ class SandwichMachine:
             self.machine_resources[item] -= order_ingredients[item]
 
 
-### Make an instance of SandwichMachine class and write the rest of the codes ###
+# instance of SandwichMachine and the rest of the code
 
 sandwichMachine = SandwichMachine(resources)
 insertedCoins = 0
