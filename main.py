@@ -92,10 +92,10 @@ while (sandwich_type != "off"):
         print("Ham: ", resources["ham"])
         print("Cheese: ", resources["cheese"])
     elif (sandwich_type == "small" or sandwich_type == "medium" or sandwich_type == "large"):
-        if sandwichMachine.check_resources(recipes[sandwich_type]["ingredients"]) == True:
+        if sandwichMachine.check_resources(recipes[sandwich_type]["ingredients"]):
             insertedCoins = sandwichMachine.process_coins()
             costOfSammy = recipes[sandwich_type]["cost"]
-            if sandwichMachine.transaction_result(insertedCoins, costOfSammy) == True:
+            if sandwichMachine.transaction_result(insertedCoins, costOfSammy):
                 sandwichMachine.make_sandwich(sandwich_type, recipes[sandwich_type]["ingredients"])
                 print("Your", sandwich_type, "sandwich is ready")
     sandwich_type = input("What would you like? (small, medium, large, off, report): ")
