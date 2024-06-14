@@ -40,15 +40,14 @@ class SandwichMachine:
         self.machine_resources = machine_resources
 
     def check_resources(self, ingredients):
-        if (self.machine_resources["bread"] >= ingredients["bread"] and self.machine_resources["ham"] >= ingredients[
-            "ham"] and self.machine_resources["cheese"] >= ingredients["cheese"]):
+        if self.machine_resources["bread"] >= ingredients["bread"] and self.machine_resources["ham"] >= ingredients["ham"] and self.machine_resources["cheese"] >= ingredients["cheese"]:
             return True
         else:
-            if (self.machine_resources["bread"] < ingredients["bread"]):
+            if self.machine_resources["bread"] < ingredients["bread"]:
                 print("Sorry, we don't have enough bread")
-            if (self.machine_resources["ham"] < ingredients["ham"]):
+            if self.machine_resources["ham"] < ingredients["ham"]:
                 print("Sorry, we don't have enough ham")
-            if (self.machine_resources["cheese"] < ingredients["cheese"]):
+            if self.machine_resources["cheese"] < ingredients["cheese"]:
                 print("Sorry, we don't have enough cheese")
             return False
 
@@ -85,12 +84,12 @@ costOfSammy = 0
 change = 0
 
 sandwich_type = input("What would you like? (small, medium, large, off, report): ")
-while (sandwich_type != "off"):
-    if (sandwich_type == "report"):
+while sandwich_type != "off":
+    if sandwich_type == "report":
         print("Bread: ", resources["bread"])
         print("Ham: ", resources["ham"])
         print("Cheese: ", resources["cheese"])
-    elif (sandwich_type == "small" or sandwich_type == "medium" or sandwich_type == "large"):
+    elif sandwich_type == "small" or sandwich_type == "medium" or sandwich_type == "large":
         if sandwichMachine.check_resources(recipes[sandwich_type]["ingredients"]):
             insertedCoins = sandwichMachine.process_coins()
             costOfSammy = recipes[sandwich_type]["cost"]
